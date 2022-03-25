@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css" >
+</head>
+<!-- <body>
+
+
+  <h1> TODO LIST</h1>
+  <hr>
+  <div class="input-discription-box">
+      <form action="/todo_list" method="post">
+        <input class="disc-box" type="text" name="discription" placeholder="discription" required>
+    </form>
+  </div>
+  <hr>
+  <div class="input-category-date-box">
+      <form action="/todo_list" method="post">
+        <input  class="cat-date-box"  type="text" name="category" placeholder="category">
+        <input   class="cat-date-box" type="date" name="Due-date" placeholder="date" required>
+      </form>
+  </div>
+<hr>
+  <div class="add-delete-bottons">
+      <button id="button-add" class="button">
+        ADD TASK 
+      </button>
+      <button id="button-delete" class="button">
+       DELETE TASK
+     </button>
+
+  </div >
+  <div  class="task-show-list">
+  <ul id="task-list">
+      <li>
+          <hr>
+          <div>
+            
+             <input type="checkbox">
+             <input type="text" placeholder=" discription" required>
+          </div>
+          <div>
+            
+          </div>
+          <hr>
+      </li>
+  </ul>
+  </div>
+</body> -->
+<body>
+  <h1> TODO LIST</h1>
+  <div>
+    <form action="/todo_list" method="post">
+      <div>
+        <input type="text" placeholder="disciption" name="discription" required>
+      </div>
+      <div>
+        <input type="text" placeholder="category" name="category" required>
+        <input type="date" placeholder="date" name="date">
+     </div>
+     <div>
+       <button type="submit">add</button>
+     </div>
+
+    </form>
+    <div>
+     <form action="/delete_checked_todo_list_item?list=<%=todo_task_list%>" method="post">
+      <button type="submit">delete</button>
+      <!-- <input type="text" placeholder="delete" name="delete" required> -->
+     </form>
+      
+    </div>
+  </div>
+  <div>
+    <% for(let index = 0 ; index < todo_task_list.length; index++ ){%>
+
+      <hr>
+    <ul>
+      <li>
+        <form action="/check_box_value?" method="post">
+          <input type="checkbox" name="checkbox" value="ture">
+        </form>
+        
+        <p><%= todo_task_list[index].discription %></p>
+        <p><%=  todo_task_list[index].category %></p>
+        <p><%=  todo_task_list[index].date %></p>
+        
+      </li>
+    </ul>
+    <hr>
+
+      <% }%>
+    
+  </div>
+  
+
+  <!-- <% for(let i = 0 ; i < todo_task_list.length ; i++){ %>
+         <p><%= todo_task_list[i].checkbox %></p>
+        <p><%= todo_task_list[i].discription %></p>
+        <p><%=  todo_task_list[i].category %></p>
+        <p><%=  todo_task_list[i].date %></p>
+        <hr>
+         
+    <% }%> -->
+  
+</body>
+</html>

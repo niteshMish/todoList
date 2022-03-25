@@ -1,0 +1,48 @@
+
+body{
+    /* text-align: center; */
+}
+.input-discription-box{
+
+    align-items: center;
+    margin-left: 30%;
+
+    height: 40px
+    /* background-color: aqua; */
+
+}
+.disc-box{
+    height: 30px;
+    width: 50%;
+}
+.cat-date-box{
+    height: 30px;
+    width: 48%;
+}
+.input-cotegory-date-box{
+    display:flex;
+     /* flex-wrap: wrap; */
+     flex-direction: row;
+    justify-content:space-between;
+}
+.add-delete-bottons{
+    
+    margin-left: 30%;
+
+}
+.button{
+    height: 80px;
+    width: 180px;
+}
+#button-add{
+    background-color: aqua;
+}
+#button-delete{
+    background-color: rgb(213, 206, 214);
+}
+#task-list{
+   list-style-type:none; 
+}
+.task-show-list{
+    margin-left:-43px ;
+}
