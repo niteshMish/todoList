@@ -6,39 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/home.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
 </head>
  
       
 <body>
-  <h1> TODO LIST</h1>
+  <h1 id="name-of-list"> TODO LIST</h1>
   <div>
     <form action="/todo_list" method="post">
-      <div>
-        <input type="text" placeholder="desciption" name="description" required>
-      </div>
-      <div>
-        <input type="text" placeholder="category" name="category" required>
-        <input type="date" placeholder="date" name="date" required>
+      <hr>
+      <p> Task Description</p>
+       <input id="description-input-box" type="text" placeholder="Add description of task ...." name="description" required>
+        <hr>
+       <div id="cat-date-input-box">
+      
+        <div class="cat-date-flex">
+            <p> Category of task</p>
+            <input class="category-date-box" type="text" placeholder="Add category of task..." name="category" required>
+        </div>
+        <div class="cat-date-flex">
+            <p> due date</p>
+            <input class="category-date-box" type="date" placeholder="Add Due date.." name="date" required>
+        </div>
+       
      </div>
-     <div>
-       <button type="submit">add</button>
+     <hr>
+     <div  class="add-delete-item-align-center">
+      <button class="button" id="add-button" type="submit">
+          <i id="add-txt">Add</i>
+          <i id="add-icon" class="material-icons">library_add</i>
+      </button>
      </div>
-   </form>
+    </form>
     <div>
      <form action="/delete_checked_todo_list_item" method="get">
-
-      <button type="submit">delete</button>
+       <div class="add-delete-item-align-center">
+        <button class="button" id="delete-button" type="submit">
+          <i id="delete-txt">Delete</i>
+          <i id="delete-icon" class="material-icons">delete</i>
+        </button>
+      </div>
+      
      
     <% for(let index = 0 ; index < task.length;index++ ){%>
 
         <hr>
-      <ul>
+      <ul id="task-list">
         <li>
-          <input type="checkbox" name="<%=task[index]._id%>">
-          <p><%= task[index].description %></p>
-          <p><%=  task[index].category %></p>
-          <p><%=  task[index].date %></p>
-          
+          <!-- <p>Task Description</p> -->
+          <div id="list-dec-check">
+            <input id="check-box" type="checkbox" name="<%=task[index]._id%>">
+            <p id="dec-box"><%= task[index].description %></p>
+
+          </div>
+          <!-- <p>Due-Date</p> -->
+          <div id="list-date-des">
+            <p><%=  task[index].date %></p>
+            <p><%=  task[index].category %></p>
+          </div>
         </li>
       </ul>
       <hr>
@@ -49,10 +76,5 @@
       
     </div>
   </div>
- 
-  
-
-  
-  
-</body>
+ </body>
 </html>

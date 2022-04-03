@@ -1,48 +1,94 @@
-
 body{
-    /* text-align: center; */
+    background-color: #faebd7;
 }
-.input-discription-box{
-
-    align-items: center;
-    margin-left: 30%;
-
-    height: 40px
-    /* background-color: aqua; */
-
+#name-of-list{
+    text-align: center;
 }
-.disc-box{
-    height: 30px;
-    width: 50%;
+#description-input-box{
+    height: 40px;
+    width: 100%;
 }
-.cat-date-box{
-    height: 30px;
-    width: 48%;
-}
-.input-cotegory-date-box{
-    display:flex;
-     /* flex-wrap: wrap; */
-     flex-direction: row;
-    justify-content:space-between;
-}
-.add-delete-bottons{
+#cat-date-input-box{
+    display: flex;
+    /* justify-content:space-between ; */
+    justify-items: stretch;
     
-    margin-left: 30%;
+   
+}
+input[type="text" ], textarea {
 
+    background-color : #faebd7; 
+  
+  }
+  input {
+    border-style: none;
 }
-.button{
-    height: 80px;
-    width: 180px;
+  input[type="date" ], textarea {
+
+    background-color : #faebd7; 
+  
+  }
+  
+.category-date-box{
+    height: 40px;
+    width: 400px;
+    background-color: blue;
 }
-#button-add{
-    background-color: aqua;
+.cat-date-flex{
+    display: flex;
+    flex-direction: column;
 }
-#button-delete{
-    background-color: rgb(213, 206, 214);
+.button {
+    border-radius: 20px;
+    color: rgb(138, 132, 132);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: solid;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    height:80px ;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #delete-icon{
+    margin: 6px;
+  }
+  #add-icon{
+   margin:6px 
+  }
+  #add-button:hover{
+      background-color: blue;
+    }
+  #delete-button:hover{
+     background-color: rgb(168, 168, 180);
+      }
+ .add-delete-item-align-center{
+         margin-left: 50%;
+     } 
+ #add-button{
+   background-color:rgb(240, 212, 202) ;
+ }
+ #task-list{
+    list-style: none;
+ }
+
+
+ #list-date-des{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }  
+ #list-dec-check{
+  display: flex;
+  flex-direction: row;
+ }
+ #check-box{
+   margin-left: -20px;
+ }
+ #dec-box{
+  margin-top: 0px;
 }
-#task-list{
-   list-style-type:none; 
-}
-.task-show-list{
-    margin-left:-43px ;
-}
+
