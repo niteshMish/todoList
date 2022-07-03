@@ -1,5 +1,5 @@
 body{
-    background-color: #faebd7;
+    background-color: hsl(50, 78%, 91%);
 }
 #name-of-list{
     text-align: center;
@@ -60,10 +60,12 @@ input[type="text" ], textarea {
    margin:6px 
   }
   #add-button:hover{
-      background-color: blue;
+      background-color: rgb(4, 4, 120);
+      color: white;
     }
   #delete-button:hover{
-     background-color: rgb(168, 168, 180);
+     background-color: rgb(121, 6, 6);
+     color: white;
       }
  .add-delete-item-align-center{
          margin-left: 50%;

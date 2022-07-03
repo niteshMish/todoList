@@ -1,14 +1,7 @@
+
+// import Task schema
 const Task = require("../models/tasks");
-
-var toBeDeletedList =[];
-var task_list  =[
-    // {
-    //     discription:'xyz',
-    //     date:'10/3/2000',
-    //     category:'xyz'
-    // }
-]
-
+// controller for home pase
 module.exports.home = function(request , response){
 
     Task.find({},function(err ,task){
@@ -22,6 +15,7 @@ module.exports.home = function(request , response){
     });
     
 } 
+// controller for appending the task to task list
 module.exports.appended_list = function(request, response){
 
     Task.create({
@@ -36,6 +30,7 @@ module.exports.appended_list = function(request, response){
         return response.redirect('back');
     })
 }
+// controller for deleting the checked list item
 module.exports.deleted_item_todo_list = function(request,response){
 
     var id = request.query;
@@ -49,7 +44,6 @@ module.exports.deleted_item_todo_list = function(request,response){
             }
         })
     }
-   
     return response.redirect('back');
 }
 

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/task_list_db');
+mongoose.connect('mongodb+srv://todo_list:nitesh1@#$@cluster0.2isgn.mongodb.net/?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
