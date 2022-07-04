@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb+srv://todo_list:nitesh1@#$@cluster0.2isgn.mongodb.net/?retryWrites=true&w=majority');
+require('dotenv').config();
+mongoose.connect(process.env.CONNECT);
 
 const db = mongoose.connection;
 
